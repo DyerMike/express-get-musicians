@@ -5,9 +5,9 @@ const { db } = require("../db/connection")
 
 const port = 3000;
 
-app.get("musicians", async (req, res) =>{
+app.get("/musicians", async (request, response) =>{
     const musician = await Musician.findAll();
-    res.json(musician);
+    response.json(musician);
 })
 
 
